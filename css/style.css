@@ -1,0 +1,1334 @@
+/* COMENZAMOS A AGREGAR ESTILO A LA CASA DEL VINO */
+
+@keyframes stretchEffect {
+    0% {
+      transform: scaleY(1);
+    }
+    100% {
+      transform: scaleY(1.3); /* Estira hacia abajo, puedes ajustar este valor */
+    }
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html{
+    width: 100%;
+}
+
+
+/* ETIQUETAS DE GRID */
+
+
+.container {  
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.4fr 3fr 0.5fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "header header header"
+    "main main main"
+    "footer footer footer";
+    background-color: black;
+   
+}
+
+.header { 
+    grid-area: header;
+
+}
+
+.main { 
+
+    grid-area: main;
+    
+
+}
+
+.footer { 
+    
+    grid-area: footer; 
+
+}
+
+.container_tipos_de_vino {  
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 8fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "header header header"
+        "main_tipos_de_vino main_tipos_de_vino main_tipos_de_vino"
+        "footer footer footer";
+}
+
+.header { 
+    grid-area: header; 
+
+}
+
+.main_tipos_de_vino { 
+
+    grid-area: main_tipos_de_vino; 
+
+}
+
+.footer { 
+    
+    grid-area: footer; 
+
+}
+
+.container_conocenos {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.4fr 6.5fr 0.3fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "header header header"
+        "main_conocenos main_conocenos main_conocenos"
+        "footer footer footer";
+}
+  
+.header { 
+
+    grid-area: header; 
+
+}
+
+.main_conocenos { 
+
+    grid-area: main_conocenos; 
+
+}
+
+.footer { 
+
+    grid-area: footer; 
+
+}
+  
+.container_contacto { 
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.3fr 3fr 0.3fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "header header header"
+        "main_contacto main_contacto main_contacto"
+        "footer footer footer";
+}
+  
+  .header { 
+
+    grid-area: header;
+}
+  
+  .main_contacto { 
+
+    grid-area: main_contacto;
+}
+  
+  .footer { 
+    
+    grid-area: footer;
+}
+
+
+.container_subscribite {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.4fr 4fr 0.3fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "header header header"
+        "main_subscribite main_subscribite main_subscribite"
+        "footer footer footer";
+
+  }
+  
+  .header { 
+    
+    grid-area: header;
+}
+  
+  .main_subscribite { 
+    
+    grid-area: main_subscribite;
+}
+  
+  .footer { 
+    
+    grid-area: footer;
+}
+  
+
+
+.header{
+    display: flex;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+.header .logo{
+
+    width: 150px;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,0.9108893557422969) 0%, rgba(207,236,213,1) 100%);
+    height: 100%;
+}
+.titulo{
+    display: flex;
+    justify-content: center;
+    font-family: 'Acme', sans-serif;
+    font-size: 3rem;
+}
+.contenedor_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    background-color: #cfecd5;
+}
+
+.contenedor_nav{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-around;
+    
+    padding: 0.5rem;
+    border-radius: 1rem;
+    
+}
+
+.contenedor_nav a{
+    text-decoration: none;
+    color: black;
+    width: 10rem;
+    height: 3rem;
+    border-radius: 2px;
+    transition: color 0.3s, font-size 0.3s;
+    background-image: url(../fotos/etiqueta.png);
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor_nav a:hover {
+    color: white;
+    font-size: 1.03em;
+    
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+}
+
+.sectionMundo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.contenedor_texto{
+    margin-top: 3rem;
+    position: absolute;
+    font-size: 1.5rem;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.texto_1{
+    height: 6rem;
+    position: relative;
+    right: 1rem;
+}
+
+.texto_1_1{
+    
+    margin: 0;
+    line-height: 1;
+    opacity: 0.8;
+}
+
+
+
+.texto_1_2{
+
+    font-size: 3rem;
+    margin: 0;
+    line-height: 1;
+    animation: stretchEffect 3s infinite alternate; /* Aplica la animación */
+    transform-origin: bottom;
+    opacity: 0.8;
+}
+
+
+.texto_1_3{
+    
+    margin: 0;
+    line-height: 1;
+    position: relative;
+    bottom: 0.8rem;
+    opacity: 0.8;
+    
+}
+
+.texto_2{
+    display: flex;
+    opacity: 0.8;
+    position: relative;
+    top: 8rem;
+    left: 2rem;
+}
+
+.texto_2_1{
+    display: flex;
+    align-items: center;
+    font-size: 6.15rem;
+    
+}
+.texto_2_2{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.4rem;
+}
+
+
+.imgMundo{
+    width: 100%;
+}
+
+.section_tipos{
+
+    display: flex;
+    flex-direction: row;
+       
+}
+
+
+
+/* TIPOS DE VINO */
+
+.main_tipos_de_vino{
+
+    background-image: url(../fotos/main_tipos_de_vino.jpg);
+    background-size: cover;
+    
+    
+}
+
+.contenedor_titulo_main{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    background-color: #cfecd541;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.titulo_main_tipos_de_vino{
+    padding:1rem;
+    text-align: center;
+    border-radius: 1rem;
+    font-family: 'Acme', sans-serif;
+    font-size: 2rem;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(207, 236, 213, 0.7));
+    width: 30%;
+    
+    
+}
+
+.section_tipos{
+    display: grid;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 3rem 3rem;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "div1 div2"
+    "div3 div4"
+    "div5 div6";
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-bottom: 3rem;
+
+}
+
+
+.div1 { 
+
+    grid-area: div1;
+
+}
+
+
+.div2 { 
+
+    grid-area: div2; 
+
+}
+.div3 { 
+
+    grid-area: div3; 
+
+}
+.div4 { 
+
+    grid-area: div4; 
+
+}
+.div5 { 
+    grid-area: div5; 
+
+}
+.div6 { 
+    grid-area: div6; 
+
+}
+
+
+
+.section_tipos div{
+
+    background-color: rgba(255, 255, 255, 0.7);
+    border-top-left-radius: 4rem;
+    border-top-right-radius: 4rem;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    transition: background-color 1s;
+    padding-top: 1.5rem;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.section_tipos div h3{
+    padding-bottom: 1rem;
+}
+
+.section_tipos div p{
+    padding-bottom: 2rem;
+    height: 8rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.section_tipos div:hover {
+
+    background-color: rgba(255, 255, 255, 1); /* Opacidad completa al hacer hover */
+}
+
+
+.imagen_tinto{
+    width: 100%;
+    height: 35.9rem;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+}
+
+
+
+.footer { 
+    
+    grid-area: footer; 
+}
+
+.main_contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../fotos/main_contacto.jpg);
+    background-size: cover;
+}
+
+.formulario_contacto{
+
+    width: 60%;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 5rem;
+    border-top-left-radius: 4rem;
+    border-top-right-radius: 4rem;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    transition: background-color 1s;
+    margin-bottom: 4rem;
+    
+
+}
+
+.formulario_contacto:hover{
+
+    background-color: rgba(255, 255, 255, 1); 
+}
+
+
+
+.contenedor_titulo{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    background-color: #cfecd541;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+
+}
+.titulo_main_contacto{
+
+    width: 100%;
+    padding:1rem;
+    text-align: center;
+    border-radius: 1rem;
+    font-family: 'Acme', sans-serif;
+    font-size: 2rem;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(207, 236, 213, 0.7));
+    width: 30%;
+    
+}
+
+.form-control{
+    background-color: white;
+    transition: background-color 1s;
+}
+
+.form-control:hover{
+    background-color: rgba(128, 128, 128, 0.319);
+}
+
+
+.main_subscribite{
+
+    background-image: url(../fotos/main_subscribite.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.formulario_subscribite{
+    width: 50%;
+    width: 60%;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 5rem;
+    border-top-left-radius: 4rem;
+    border-top-right-radius: 4rem;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    transition: background-color 1s;
+    margin-bottom: 4rem;
+}
+
+.main_conocenos{
+    background-image: url(../fotos/main_conocenos.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.contenedor_datos{
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 4rem;
+    border-top-left-radius: 4rem;
+    border-top-right-radius: 4rem;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    transition: background-color 1s;
+    margin-bottom: 4rem;
+}
+
+.contenedor_datos:hover{
+
+    background-color: rgba(255, 255, 255, 1); 
+}
+
+.dato1{
+    background-color: rgba(38, 130, 150, 0.151);
+    padding: 2rem;
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+}
+
+.dato2{
+    background-color: rgba(38, 130, 150, 0.151);
+    padding: 2rem;
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+    
+}
+
+.dato3{
+    background-color: rgba(38, 130, 150, 0.151);
+    padding: 2rem;
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+}
+
+.dato4{
+    background-color: rgba(38, 130, 150, 0.151);
+    padding: 2rem;
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+}
+
+.dato5{
+    background-color: rgba(38, 130, 150, 0.151);
+    padding: 2rem;
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+}
+
+.dato6{
+    background-color: rgba(38, 130, 150, 0.151);
+    padding: 2rem;
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+.footer{
+    background-color: #cfecd5;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.info_footer{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.titulo_info_1{
+    margin-bottom: 1rem;
+}
+
+.titulo_info_2{
+    margin-bottom: 1rem;
+}
+
+.titulo_info_3{
+    margin-bottom: 1rem;
+}
+
+.derechos_footer{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    align-self: center;
+}
+
+/* ETIQUETAS RESPONSIVAS */
+
+/* INDEX */
+
+@media screen and (max-width: 990px) {
+
+    .container {  
+    
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0.4fr 2fr 0.5fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+        "header header header"
+        "main main main"
+        "footer footer footer";
+        background-color: black;
+       
+    }
+    
+    .header { 
+        grid-area: header;
+    
+    }
+    
+    .main { 
+    
+        grid-area: main;
+        
+    
+    }
+    
+    .footer { 
+        
+        grid-area: footer; 
+    
+    }
+
+    .contenedor_nav a{
+        text-decoration: none;
+        color: black;
+        width: 7rem;
+        height: 2.05rem;
+        border-radius: 2px;
+        transition: color 0.3s, font-size 0.3s;
+        background-image: url(../fotos/etiqueta.png);
+        background-size: contain;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+        
+    .texto_1{
+        font-size: 1rem;
+        height: 6rem;
+        position: relative;
+        right: 1rem;
+    }
+
+    .texto_1_1{
+        
+        margin: 0;
+        line-height: 1;
+        opacity: 0.8;
+    }
+
+
+
+    .texto_1_2{
+
+        font-size: 3rem;
+        margin: 0;
+        line-height: 1;
+        animation: stretchEffect 3s infinite alternate; /* Aplica la animación */
+        transform-origin: bottom;
+        opacity: 0.8;
+    }
+
+
+    .texto_1_3{
+        
+        margin: 0;
+        line-height: 1;
+        position: relative;
+        bottom: 0.8rem;
+        opacity: 0.8;
+        
+    }
+
+    
+    .texto_2{
+        display: flex;
+        opacity: 0.8;
+        position: relative;
+        top: 4rem;
+        left: 2rem;
+        font-size: 1rem;
+    }
+
+
+    .texto_2_1{
+        display: flex;
+        align-items: center;
+        font-size: 4.15rem;
+        
+    }
+    .texto_2_2{
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 750px) {
+
+    .container {  
+    
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0.4fr 1fr 0.5fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+        "header header header"
+        "main main main"
+        "footer footer footer";
+        background-color: black;
+       
+    }
+    
+    .header { 
+        grid-area: header;
+    
+    }
+    
+    .main { 
+    
+        grid-area: main;
+        
+    
+    }
+    
+    .footer { 
+        
+        grid-area: footer; 
+    
+    }
+
+    .contenedor_nav{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .contenedor_nav a{
+        text-decoration: none;
+        color: black;
+        width: 6.5rem;
+        height: 1.9rem;
+        border-radius: 2px;
+        transition: color 0.3s, font-size 0.3s;
+        background-image: url(../fotos/etiqueta.png);
+        background-size: contain;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0.5rem;
+        
+    }
+
+    .texto_1{
+        
+        height: 6rem;
+        position: relative;
+        right: 1rem;
+    }
+
+    .texto_1_1{
+        font-size: 1.5rem;
+        margin: 0;
+        line-height: 1;
+        opacity: 0.8;
+    }
+
+
+
+    .texto_1_2{
+
+        font-size: 2rem;
+        margin: 0;
+        line-height: 1;
+        animation: stretchEffect 3s infinite alternate; /* Aplica la animación */
+        transform-origin: bottom;
+        opacity: 0.8;
+        position: relative;
+        top:0.2rem;
+    }
+
+
+    .texto_1_3{
+        font-size: 1.5rem;
+        margin: 0;
+        line-height: 1;
+        position: relative;
+        top: 0px;
+        
+        opacity: 0.8;
+        
+    }
+
+    
+    .texto_2{
+        display: flex;
+        opacity: 0.8;
+        position: relative;
+        top: 1rem;
+        left: 2rem;
+        
+    }
+
+
+    .texto_2_1{
+        display: flex;
+        align-items: center;
+        font-size: 4rem;
+        
+    }
+    .texto_2_2{
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 1rem;
+    }
+    .texto_2_2_1{
+        font-size: 1.5rem;
+    }
+    .texto_2_2_2{
+        font-size: 1.5rem;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+
+    .container {  
+    
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0.4fr 0.5fr 2fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+        "header header header"
+        "main main main"
+        "footer footer footer";
+        background-color: black;
+       
+    }
+    
+    .header { 
+        grid-area: header;
+    
+    }
+    
+    .main { 
+    
+        grid-area: main;
+        
+    
+    }
+    
+    .footer { 
+        
+        grid-area: footer; 
+    
+    }
+
+
+    .titulo{
+        display: flex;
+        justify-content: center;
+        font-family: 'Acme', sans-serif;
+        font-size: 2rem;
+    }
+
+
+    .texto_1{
+        
+        height: 6rem;
+        position: relative;
+        right: 1rem;
+        bottom: 1rem;
+    }
+
+    .texto_1_1{
+        font-size: 1rem;
+        margin: 0;
+        line-height: 1;
+        opacity: 0.8;
+    }
+
+
+
+    .texto_1_2{
+
+        font-size: 1.5rem;
+        margin: 0;
+        line-height: 1;
+        animation: stretchEffect 3s infinite alternate; /* Aplica la animación */
+        transform-origin: bottom;
+        opacity: 0.8;
+        position: relative;
+        top:0.2rem;
+    }
+
+
+    .texto_1_3{
+        font-size: 1rem;
+        margin: 0;
+        line-height: 1;
+        position: relative;
+        top: 0px;
+        
+        opacity: 0.8;
+        
+    }
+
+    
+    .texto_2{
+        display: flex;
+        opacity: 0.8;
+        position: relative;
+        top: 0rem;
+        left: 2rem;
+        
+    }
+
+
+    .texto_2_1{
+        display: flex;
+        align-items: center;
+        font-size: 2.7rem;
+        
+    }
+    .texto_2_2{
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 1rem;
+    }
+    .texto_2_2_1{
+        font-size: 1rem;
+    }
+    .texto_2_2_2{
+        font-size: 1rem;
+    }
+
+    
+
+    .info_footer{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        width: 50%;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        align-self: center;
+    }
+
+    .info_1{
+        margin-bottom: 1.5rem;
+    }
+    .info_2{
+        margin-bottom: 1.5rem;
+    }
+    .info_3{
+        margin-bottom: 1.5rem;
+    }
+
+
+}
+
+/* TIPOS DE VINO*/
+
+@media screen and (max-width: 990px) {
+
+    .container_tipos_de_vino {  
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0.1fr 8fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "header header header"
+            "main_tipos_de_vino main_tipos_de_vino main_tipos_de_vino"
+            "footer footer footer";
+    }
+    
+    .header { 
+        grid-area: header; 
+    
+    }
+    
+    .main_tipos_de_vino { 
+    
+        grid-area: main_tipos_de_vino; 
+    
+    }
+    
+    .footer { 
+        
+        grid-area: footer; 
+    
+    }
+
+    .section_tipos div p{
+        padding-bottom: 2rem;
+        height: 15rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+
+}
+
+@media screen and (max-width: 800px) {
+
+    .section_tipos{
+        display: grid;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 3rem 3rem;
+        grid-auto-flow: row;
+        grid-template-areas:
+        "div1"
+        "div2"
+        "div3"
+        "div4"
+        "div5"
+        "div6";
+        margin-left: 3rem;
+        margin-right: 3rem;
+        margin-bottom: 3rem;
+    
+    }
+    
+    
+    .div1 { 
+    
+        grid-area: div1;
+    
+    }
+    
+    
+    .div2 { 
+    
+        grid-area: div2; 
+    
+    }
+    .div3 { 
+    
+        grid-area: div3; 
+    
+    }
+    .div4 { 
+    
+        grid-area: div4; 
+    
+    }
+    .div5 { 
+        grid-area: div5; 
+    
+    }
+    .div6 { 
+        grid-area: div6; 
+    
+    }
+
+    .section_tipos div p{
+        padding-bottom: 2rem;
+        height: 8rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+
+
+    .container_tipos_de_vino {  
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0.1fr 6fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "header header header"
+            "main_tipos_de_vino main_tipos_de_vino main_tipos_de_vino"
+            "footer footer footer";
+    }
+    
+    .header { 
+        grid-area: header; 
+    
+    }
+    
+    .main_tipos_de_vino { 
+    
+        grid-area: main_tipos_de_vino; 
+    
+    }
+    
+    .footer { 
+        
+        grid-area: footer; 
+    
+    }
+
+    .section_tipos div p{
+        padding-bottom: 2rem;
+        height: 15rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+/* CONOCENOS */
+
+@media screen and (max-width: 550px) {
+
+    .container_conocenos {  
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0.1fr 4fr 0.3fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "header header header"
+            "main_conocenos main_conocenos main_conocenos"
+            "footer footer footer";
+    }
+      
+    .header { 
+    
+        grid-area: header; 
+    
+    }
+    
+    .main_conocenos { 
+    
+        grid-area: main_conocenos; 
+    
+    }
+    
+    .footer { 
+    
+        grid-area: footer; 
+    
+    }
+
+    .titulo_main_contacto{
+        width: 80%;
+    }
+
+}
+
+/* CONTACTO */
+
+@media screen and (max-width: 800px) {
+
+
+    
+
+
+    .formulario_contacto{
+
+        width: 80%;
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 5rem;
+        border-top-left-radius: 4rem;
+        border-top-right-radius: 4rem;
+        border-bottom-left-radius: 1.5rem;
+        border-bottom-right-radius: 1.5rem;
+        transition: background-color 1s;
+        margin-bottom: 4rem;
+        
+    
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+
+    .container_contacto { 
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0.1fr 1fr 0.3fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "header header header"
+            "main_contacto main_contacto main_contacto"
+            "footer footer footer";
+    }
+      
+      .header { 
+    
+        grid-area: header;
+    }
+      
+      .main_contacto { 
+    
+        grid-area: main_contacto;
+    }
+      
+      .footer { 
+        
+        grid-area: footer;
+    }
+
+}
+
+
+/* SUBSCRIBITE */
+
+@media screen and (max-width: 800px) {
+
+
+    .formulario_subscribite{
+
+        width: 80%;
+        
+        
+    
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+
+    .container_subscribite {
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0.1fr 1fr 0.3fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "header header header"
+            "main_subscribite main_subscribite main_subscribite"
+            "footer footer footer";
+    
+      }
+      
+      .header { 
+        
+        grid-area: header;
+    }
+      
+      .main_subscribite { 
+        
+        grid-area: main_subscribite;
+    }
+      
+      .footer { 
+        
+        grid-area: footer;
+    }
+}
